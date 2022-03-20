@@ -3,12 +3,12 @@
 }
 
 .App-logo {
-  height: 30vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
 .spinner{
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
@@ -42,10 +42,44 @@
   }
 }
 
+.highlight{
+  background-color: #212529;
+  border-color: white;
+}
+.highlight:hover{
+  background-color: #198754;
+  border-color: #198754;
+}
 .pointer{
   cursor: pointer;
 }
-
 .hide{
   display: none;
+}
+.opacity-10{
+  opacity: 0.1;
+}
+.opacity-20{
+  opacity: 0.2;
+}
+.opacity-30{
+  opacity: 0.3;
+}
+.opacity-40{
+  opacity: 0.4;
+}
+.opacity-50{
+  opacity: 0.5;
+}
+.opacity-60{
+  opacity: 0.6;
+}
+.opacity-70{
+  opacity: 0.7;
+}
+.opacity-80{
+  opacity: 0.8;
+}
+.opacity-90{
+  opacity: 0.9;
 }

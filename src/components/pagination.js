@@ -55,13 +55,13 @@ export default function Pagination(props){
     <nav aria-label="Page navigation">
         <ul className="pagination">
             <li className="page-item">
-                <div className={`page-link bg-dark pointer ${pagination[0]<=1?'text-secondary border-secondary':'text-success border-success'}`} aria-label="Previous" onClick={()=>{navigatePagination(false)}}>
+                <div className={`page-link bg-dark pointer text-success border-success ${pagination[0]<=1?'opacity-50':''}`} aria-label="Previous" onClick={()=>{navigatePagination(false)}}>
                     <span aria-hidden="true">&laquo;</span>
                 </div>
             </li>
             {paginationElements}
             <li className="page-item">
-                <div className={`page-link bg-dark pointer ${paginationLast>=props.totalPages?'text-secondary border-secondary':'text-success border-success'}`} aria-label="Next" onClick={()=>{navigatePagination(true)}}>
+                <div className={`page-link bg-dark pointer text-success border-success ${paginationLast>=props.totalPages?'opacity-50':''}`} aria-label="Next" onClick={()=>{navigatePagination(true)}}>
                     <span aria-hidden="true">&raquo;</span>
                 </div>
             </li>
