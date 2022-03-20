@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { globals } from "../utils/globalVars";
 import CharacterCard from "./characterCard";
+import Filters from "./filters";
 import Loading from "./loading";
 import Pagination from "./pagination";
 
@@ -9,7 +10,8 @@ export default function CharactersList(){
     const [characters, setCharacters] = useState();
     const [page, setPage] = useState(1);
     const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [showStarred, setShowStarred] = useState(false);
 
     // this useEffect will run once
     useEffect(() => {
@@ -17,14 +19,12 @@ export default function CharactersList(){
         .then(res => res.json())
         .then(
             (result) => {
-            setIsLoaded(true);
             setCharacters(result);
             },
             // Note: it's important to handle errors here
             // instead of a catch() block so that we don't swallow
             // exceptions from actual bugs in components.
             (error) => {
-            setIsLoaded(true);
             setError(error);
             }
         )
@@ -48,7 +48,10 @@ export default function CharactersList(){
     }else if(characters){
         return(
             <div className="container">
-                <div className="row" style={{width: '100%'}}>
+                <div className="row">
+                    <Filters searchHandler={setSearchQuery} viewHandler={setShowStarred}/>
+                </div>
+                <div className="row mt-5" style={{width: '100%'}}>
                     {characterGrird}
                 </div>
                 <div className="d-flex justify-content-center my-5">
