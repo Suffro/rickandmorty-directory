@@ -12,7 +12,7 @@ function App() {
         </div>
       </header>
       <Home/>
-      <p className='text-center text-white mt-5 mb-3'>Made with ❤️ by <a className='text-success' href='#'>Lorenzo Suffritti</a></p>
+      <p className='text-center text-white mt-5 mb-3'>Made with ❤️ by <a className='text-success' target={'_blank'} href='https://github.com/Suffro/rickandmorty-directory'>Lorenzo Suffritti</a></p>
     </>
   );
 }
