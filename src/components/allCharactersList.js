@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useGlobalState } from "../state";
 import { globals } from "../utils/globalVars";
 import CharacterCard from "./characterCard";
+import CharacterModal from "./characterModal";
 import Loading from "./loading";
 import Pagination from "./pagination";
 
@@ -43,14 +45,17 @@ export default function AllCharactersList(props){
             );
         }
         return(
-            <div className="container">
-                <div className="row mt-5" style={{width: '100%'}}>
-                    {characterGrird}
+            <>
+                <div className="container">
+                    <div className="row mt-5" style={{width: '100%'}}>
+                        {characterGrird}
+                    </div>
+                    <div className="d-flex justify-content-center my-5">
+                        <Pagination currentPage={page} pageHandler={setPage} totalPages={totalPages}/>
+                    </div>
                 </div>
-                <div className="d-flex justify-content-center my-5">
-                    <Pagination currentPage={page} pageHandler={setPage} totalPages={totalPages}/>
-                </div>
-            </div>
+                <CharacterModal/>
+            </>
         );
     }else{
         return <div className="d-flex justify-content-center mt-5"><Loading/></div>;

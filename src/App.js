@@ -6,7 +6,7 @@ function App() {
   
   return (
     <>
-      <header className='mt-4 mb-5'>
+      <header className='mt-4 mb-4'>
         <div className='d-flex justify-content-center'>
           <img className="App-logo" src={logo} alt="Rick and Morty"/>
         </div>

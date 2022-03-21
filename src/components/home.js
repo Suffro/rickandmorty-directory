@@ -15,10 +15,12 @@ export default function Home(){
     }
     return(
         <div className="container">
-            <div className="row">
-                <Filters searchHandler={setSearchQuery} viewHandler={setShowStarred} showStarred={showStarred}/>
+            <div className="row mb-4">
+                <div className="col"></div>
+                <div className="col-10"><Filters searchHandler={setSearchQuery} viewHandler={setShowStarred} showStarred={showStarred}/></div>
+                <div className="col"></div>
             </div>
-            <div className="row mt-3" style={{width: '100%'}}>
+            <div className="row" style={{width: '100%'}}>
                 {listToShow}
             </div>
         </div>
