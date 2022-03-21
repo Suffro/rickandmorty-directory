@@ -15,7 +15,7 @@ export default function Home(){
     }
     return(
         <div className="container">
-            <div className="row mb-4">
+            <div className="row mb-2">
                 <div className="col"></div>
                 <div className="col-10"><Filters searchHandler={setSearchQuery} viewHandler={setShowStarred} showStarred={showStarred}/></div>
                 <div className="col"></div>

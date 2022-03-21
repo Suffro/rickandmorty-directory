@@ -13,7 +13,7 @@ export default function CharacterDeatails() {
     var episodes=[];
     if (selectedCharacter.episode) {
         episodes = selectedCharacter.episode.map((ep) =>
-            <div className="col p-0 mx-1 mb-3"><button onClick={()=>{setSelectedEpisode(ep)}} className="btn btn-success text-center" style={{width:'100%'}}>{ep.split("/").pop()}</button></div>
+            <div key={ep} className="col p-0 mx-1 mb-3"><button onClick={()=>{setSelectedEpisode(ep)}} className="btn btn-success text-center" style={{width:'100%'}}>{ep.split("/").pop()}</button></div>
         );       
         return(
             <div className="card text-white bg-dark border-0">

@@ -28,7 +28,7 @@ export default function EpisodeDetails(props) {
                     <div className="card-text"><strong>Episode:</strong> {episode.episode}</div>
                     <div className="card-text"><strong>Air date:</strong> {episode.air_date}</div>
                 </div>
-                <button className="btn btn-outline-success" onClick={()=>{props.back()}}><i class="bi bi-arrow-left"></i> Back to list</button>
+                <button className="btn btn-outline-success" onClick={()=>{props.back()}}><i className="bi bi-arrow-left"></i> Back to list</button>
             </div>
         );
     }

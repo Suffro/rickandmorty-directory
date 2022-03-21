@@ -56,7 +56,7 @@ export default function Pagination(props){
     const paginationElements = [];
     for (const page of pagination) {
             paginationElements.push(
-                <li className='page-item'>
+                <li className='page-item' key={page}>
                     <div
                         className={`page-link text-success border-success pointer ${page===props.currentPage?'bg-success text-white':'bg-dark'}`}
                         onClick={()=>{props.pageHandler(page)}}

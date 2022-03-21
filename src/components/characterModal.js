@@ -3,7 +3,7 @@ import CharacterDeatails from "./characterDetails";
 
 export default function CharacterModal(){
     return(
-        <div className="modal fade bg-black-75" id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+        <div className="modal fade bg-black-75" id="characterModal" tabIndex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content bg-dark text-white border-2 border-success">
                     <div className="modal-header bg-success border-success">

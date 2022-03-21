@@ -13,6 +13,6 @@ export default function Starrer(props){
         setGlobalState('starred', Object.keys(window.localStorage));
     }
 
-    if (window.localStorage[id]) { return <i class="bi bi-star-fill text-warning pointer fs-5" onClick={()=>{toggleStarCharacter()}}></i> }
-    return <i class="bi bi-star text-warning pointer fs-5" onClick={()=>{toggleStarCharacter()}}></i>;
+    if (window.localStorage[id]) { return <i className="bi bi-star-fill text-warning pointer fs-5" onClick={()=>{toggleStarCharacter()}}></i> }
+    return <i className="bi bi-star text-warning pointer fs-5" onClick={()=>{toggleStarCharacter()}}></i>;
 }

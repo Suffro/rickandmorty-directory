@@ -48,7 +48,7 @@ export default function StarredCharactersList(props) {
         }
         for (const character of charactersToShow) {
             characterGrird.push(
-                <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4 d-flex justify-content-center">
+                <div key={character.id} className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4 d-flex justify-content-center">
                     <CharacterCard character={character}/>
                 </div>
             );

@@ -39,7 +39,7 @@ export default function AllCharactersList(props){
         totalPages = characters.info.pages;
         for (const character of characters.results) {
             characterGrird.push(
-                <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4 d-flex justify-content-center">
+                <div key={character.id} className="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mb-4 d-flex justify-content-center">
                     <CharacterCard character={character}/>
                 </div>
             );
