@@ -22,3 +22,5 @@ The application has the following features:
 5. Adding/removing a character to the list of favorite characters
 6. See the list of favorite characters
 7. Responsive Design
+
+#### [Go to app](https://rick-and-morty-directory.web.app/)
