@@ -4,3 +4,8 @@
 ## _“Wubba Lubba Dub Dub!”_
 
 
+### Dependencies:
+- react-hooks-global-state
+
+### Framework:
+- React.js
