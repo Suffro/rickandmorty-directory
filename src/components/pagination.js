@@ -6,9 +6,9 @@ export default function Pagination(props){
     var paginationLength;
 
     useEffect(() => {
-        if (props.totalPages>=4) {
-            paginationLength=4;
-            setPagination([1,2,3,4]);
+        if (props.totalPages>=7) {
+            paginationLength=7;
+            setPagination([1,2,3,4,5,6,7]);
         }else{
             let pag=[];
             for (let index = 0; index < props.totalPages; index++) {
