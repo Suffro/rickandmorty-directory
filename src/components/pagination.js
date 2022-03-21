@@ -1,9 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Pagination(props){
-    const [pagination, setPagination] = useState([1,2,3,4]);
-    const paginationLength = 4;
+    const [pagination, setPagination] = useState([]);
+    var paginationLength;
+
+    useEffect(() => {
+        if (props.totalPages>=4) {
+            paginationLength=4;
+            setPagination([1,2,3,4]);
+        }else{
+            let pag=[];
+            for (let index = 0; index < props.totalPages; index++) {
+                pag.push(index+1);
+            }
+            paginationLength=props.totalPages;
+            setPagination(pag);
+        }
+    }, [props.totalPages])
+
     const navigatePagination = (next) => {
         let newPagination = [];
         if(next){

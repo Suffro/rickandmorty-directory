@@ -1,5 +1,5 @@
 import './App.css';
-import CharactersList from './components/charactersList';
+import Home from './components/home';
 import logo from './images/Rick_and_Morty_Logo.webp'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           <img className="App-logo" src={logo} alt="Rick and Morty"/>
         </div>
       </header>
-      <CharactersList/>
+      <Home/>
       <p className='text-center text-white mt-5 mb-3'>Made with ❤️ by <a className='text-success' href='#'>Lorenzo Suffritti</a></p>
     </>
   );
