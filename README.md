@@ -4,8 +4,9 @@
 
 #### [Go to app](https://rick-and-morty-directory.web.app/)
 
-### Framework:
+### Frameworks and libraries:
 - [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
 ### Dependencies:
 - [react-hooks-global-state](https://github.com/dai-shi/react-hooks-global-state)
