@@ -1,7 +1,8 @@
 # Rick and Morty directory
 
-
 ## _“Wubba Lubba Dub Dub!”_
+
+#### [Go to app ↗](https://rick-and-morty-directory.web.app/)
 
 ### Framework:
 - [React.js](https://reactjs.org/)
