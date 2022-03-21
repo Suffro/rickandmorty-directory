@@ -25,11 +25,7 @@ export default function Pagination(props){
             let n = pagination[pagination.length-1];
             for (const page of pagination) {
                 if (n<props.totalPages) {
-                    if ((n+paginationLength)>props.totalPages) {
-                        newPagination.push(page+(props.totalPages-n)); 
-                    }else if(n<props.totalPages){
-                        newPagination.push(page+paginationLength);
-                    }
+                    newPagination.push(page+1);
                 }
             }
             if (newPagination.length>0) {
@@ -39,11 +35,7 @@ export default function Pagination(props){
             let n = pagination[0];
             for (const page of pagination) {
                 if (n>1) {
-                    if ((n-paginationLength)<1) {
-                        newPagination.push(page-(n-1)); 
-                    }else{
-                        newPagination.push(page-paginationLength);
-                    } 
+                    newPagination.push(page-1);
                 }
             }
             if (newPagination.length>0) {
@@ -55,16 +47,16 @@ export default function Pagination(props){
 
     const paginationElements = [];
     for (const page of pagination) {
-            paginationElements.push(
-                <li className='page-item' key={page}>
-                    <div
-                        className={`page-link text-success border-success pointer ${page===props.currentPage?'bg-success text-white':'bg-dark'}`}
-                        onClick={()=>{props.pageHandler(page)}}
-                    >
-                        {page}
-                    </div>
-                </li>
-            );
+        paginationElements.push(
+            <li className='page-item' key={page}>
+                <div
+                    className={`page-link text-success border-success pointer ${page===props.currentPage?'bg-success text-white':'bg-dark'}`}
+                    onClick={()=>{props.pageHandler(page)}}
+                >
+                    {page}
+                </div>
+            </li>
+        );
     }
     return( 
     <nav aria-label="Page navigation">
