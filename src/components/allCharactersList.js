@@ -28,6 +28,10 @@ export default function AllCharactersList(props){
         )
     }, [page,props.searchQuery])
 
+    useEffect(() => {
+        setPage(1);
+    }, [props.searchQuery])
+
     var totalPages;
     var characterGrird=[];
     
