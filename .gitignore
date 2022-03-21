@@ -151,3 +151,5 @@ yarn-error.log*
 
 # firebase
 .firebase
+.firebaseserc
+firebase.json
