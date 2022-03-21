@@ -5,7 +5,7 @@
 
 
 ### Dependencies:
-- react-hooks-global-state
+- [react-hooks-global-state](https://github.com/dai-shi/react-hooks-global-state)
 
 ### Framework:
-- React.js
+- [React.js](https://reactjs.org/)
