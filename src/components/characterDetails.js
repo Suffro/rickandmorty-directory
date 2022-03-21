@@ -1,21 +1,28 @@
+import { useEffect, useState } from "react";
 import { useGlobalState } from "../state";
+import EpisodeDetails from "./episodeDetails";
 import Starrer from "./toggleStarred";
 
 export default function CharacterDeatails() {
     const [selectedCharacter] = useGlobalState('selectedCharacter');
+    const [selectedEpisode, setSelectedEpisode] = useState();
+    useEffect(() => {setSelectedEpisode()}, [selectedCharacter]);
+    const unselectEpisode = () => {
+        setSelectedEpisode();
+    }
     var episodes=[];
-    if (selectedCharacter.episode!==undefined) {
+    if (selectedCharacter.episode) {
         episodes = selectedCharacter.episode.map((ep) =>
-            <div className="col p-0 mx-1 mb-3"><button className="btn btn-success text-center" style={{width:'100%'}}>{ep.split("/").pop()}</button></div>
+            <div className="col p-0 mx-1 mb-3"><button onClick={()=>{setSelectedEpisode(ep)}} className="btn btn-success text-center" style={{width:'100%'}}>{ep.split("/").pop()}</button></div>
         );       
         return(
             <div className="card text-white bg-dark border-0">
-                <div class="row g-0">
-                    <div class="col-md-4 pt-3">
+                <div className="row g-0">
+                    <div className="col-md-4 pt-3">
                         <img src={selectedCharacter.image} className="card-img-top border rounded-3 border-3 border-success" alt={selectedCharacter.name}/>   
                     </div>
-                    <div class="col-md-8"> 
-                        <div class="card-body">
+                    <div className="col-md-8"> 
+                        <div className="card-body">
                             <h4 className="card-title text-success fw-bolder d-flex justify-content-start">{selectedCharacter.name} 
                                 <span className="d-flex justify-content-center ms-2">
                                     <Starrer id={selectedCharacter.id}/>
@@ -30,9 +37,9 @@ export default function CharacterDeatails() {
                         </div>
                     </div>
                     <div className="pt-3 border-top border-1 border-success">
-                        <h6 className="text-center fw-bold mb-4">Episodes list:</h6>
+                        <h6 className="text-center fw-bold mb-4">Episode{selectedEpisode?' details':'s list'}:</h6>
                         <div className="row hide-scrollbar" style={{maxHeight:'250px',overflowY:'auto'}}>
-                            {episodes}
+                            {selectedEpisode?<EpisodeDetails episode={selectedEpisode} back={unselectEpisode}/>:episodes}
                         </div>
                     </div>
                 </div>

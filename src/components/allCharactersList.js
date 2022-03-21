@@ -11,7 +11,7 @@ export default function AllCharactersList(props){
     const [characters, setCharacters] = useState();
     const [page, setPage] = useState(1);
     const [error, setError] = useState(null);
-    // this useEffect will run once
+    
     useEffect(() => {
         fetch(globals.rickmortyApiBaseUrl+'character/?page='+page+'&name='+props.searchQuery)
         .then(res => res.json())
