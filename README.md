@@ -2,7 +2,7 @@
 
 ## _“Wubba Lubba Dub Dub!”_
 
-#### [Open application >>](https://rick-and-morty-directory.web.app/)
+#### [Go to app](https://rick-and-morty-directory.web.app/)
 
 ### Framework:
 - [React.js](https://reactjs.org/)
